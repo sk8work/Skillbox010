@@ -23,5 +23,12 @@ namespace HW1.views
         {
             InitializeComponent();
         }
+
+        private void LoginRegBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Registration registration = new Registration();
+            registration.Show();
+            this.Close();
+        }
     }
 }

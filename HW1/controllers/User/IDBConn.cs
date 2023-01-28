@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HW1
+namespace HW1.controllers.User
 {
-    abstract class Client
+    interface IDBConn
     {
-        protected Client() { }
+
     }
 }

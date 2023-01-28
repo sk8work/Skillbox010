@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HW1
+namespace HW1.controllers
 {
-    public abstract class User
+    class DBRoles
     {
-
     }
 }

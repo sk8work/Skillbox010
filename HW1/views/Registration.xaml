@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HW1.views"
         mc:Ignorable="d"
-        Title="SkillBank" Height="450" Width="800">
+        Title="SkillBank" Height="450" Width="800" Foreground="#FFE8E8E8" Background="#FF6D156D" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="114*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="50*"/>
             <RowDefinition Height="55*"/>
             <RowDefinition Height="55*"/>
             <RowDefinition Height="55*"/>
@@ -22,18 +23,22 @@
             <ColumnDefinition Width="32*"/>
         </Grid.ColumnDefinitions>
 
+        <TextBlock  Grid.Column="1" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap" FontSize="20" Text="Регистрация нового пользователя" VerticalAlignment="Center" Grid.ColumnSpan="3" Width="460" Height="44" FontWeight="Bold"/>
+
+        <Button x:Name="regLoginBtn" Grid.Column="4" Content="Логин" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Width="140" Height="44" Click="regLoginBtn_Click"/>
         <TextBlock TextWrapping="Wrap"
                    TextAlignment="Right"
                    VerticalAlignment="Center"
                    Width="95" Height="35" 
                    FontSize="18" 
                    HorizontalAlignment="Center" 
-                   Grid.Column="1" RenderTransformOrigin="0.051,0.425" Grid.Row="1" Text="Имя"/>
+                   Grid.Column="1" RenderTransformOrigin="0.051,0.425" Grid.Row="2" Text="Имя"/>
         <TextBox x:Name="regName" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Center" 
                  Height="35" 
-                 FontSize="18" Grid.Column="2" HorizontalAlignment="Center" Width="266" Grid.Row="1"
+                 Padding="2"
+                 FontSize="18" Grid.Column="2" HorizontalAlignment="Center" Width="266" Grid.Row="2"
                  />
 
         <TextBlock 
@@ -41,7 +46,7 @@
                    VerticalAlignment="Center" 
                     Height="35" 
                    FontSize="18" 
-                   Grid.Row="2" Grid.Column="1" 
+                   Grid.Row="3" Grid.Column="1" 
                     TextAlignment="Right"
             HorizontalAlignment="Center" Width="95" Text="Пароль"/>
 
@@ -50,7 +55,7 @@
                      VerticalAlignment="Center"
                      Foreground="DarkBlue"
                      MaxLength="25" PasswordChar="*"
-                     FontSize="18" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" Width="266"
+                     FontSize="18" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" Width="266"
          />
 
 
@@ -59,16 +64,16 @@
                    VerticalAlignment="Center" Height="35" 
                    FontSize="18"
                     TextAlignment="Right"
-                   Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Width="95"
+                   Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" Width="95"
                   Text="Группа"
                   />
 
-        <ComboBox Name="regBox" Text="Выберите группу" Grid.Column="2" Grid.Row="3" FontSize="18" HorizontalAlignment="Center" Width="266" Height="35" VerticalAlignment="Center" IsReadOnly="True">
+        <ComboBox Name="regBox" Text="Выберите группу" Grid.Column="2" Grid.Row="4" FontSize="18" HorizontalAlignment="Center" Width="266" Height="35" VerticalAlignment="Center" IsReadOnly="True">
             <ComboBoxItem Content="Администратор"/>
             <ComboBoxItem Content="Консультант"/>
         </ComboBox>
-        <TextBlock  Grid.Column="1" HorizontalAlignment="Center" Margin="0,19,0,0" TextAlignment="Center" TextWrapping="Wrap" FontSize="20" Text="Регистрация нового пользователя" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="460" Height="41" FontWeight="Bold"/>
-        <Button x:Name="regBtn" Grid.Column="2" Content="Зарегистрировать" FontSize="20" HorizontalAlignment="Center" Margin="0,25,0,0" Grid.Row="4" VerticalAlignment="Top" Width="265" Height="40"/>
+
+        <Button x:Name="regBtn" Grid.Column="2" Content="Зарегистрировать" FontSize="20" HorizontalAlignment="Center" Margin="0,25,0,0" Grid.Row="5" VerticalAlignment="Top" Width="265" Height="40"/>
 
     </Grid>
 </Window>
