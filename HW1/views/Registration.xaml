@@ -35,10 +35,15 @@
                    Grid.Column="1" RenderTransformOrigin="0.051,0.425" Grid.Row="2" Text="Имя"/>
         <TextBox x:Name="regName" 
                  TextWrapping="Wrap" 
+                 Text=""
                  VerticalAlignment="Center" 
                  Height="35" 
                  Padding="2"
-                 FontSize="18" Grid.Column="2" HorizontalAlignment="Center" Width="266" Grid.Row="2"
+                 FontSize="18" 
+                 Grid.Column="2" 
+                 HorizontalAlignment="Center"
+                 Width="266" Grid.Row="2" 
+                 VerticalContentAlignment="Center"
                  />
 
         <TextBlock 
@@ -47,7 +52,7 @@
                     Height="35" 
                    FontSize="18" 
                    Grid.Row="3" Grid.Column="1" 
-                    TextAlignment="Right"
+                   TextAlignment="Right"
             HorizontalAlignment="Center" Width="95" Text="Пароль"/>
 
         <PasswordBox x:Name="regPass"
@@ -55,7 +60,7 @@
                      VerticalAlignment="Center"
                      Foreground="DarkBlue"
                      MaxLength="25" PasswordChar="*"
-                     FontSize="18" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" Width="266"
+                     FontSize="18" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" Width="266" VerticalContentAlignment="Center"
          />
 
 
@@ -68,7 +73,7 @@
                   Text="Группа"
                   />
 
-        <ComboBox Name="regBox" Text="Выберите группу" Grid.Column="2" Grid.Row="4" FontSize="18" HorizontalAlignment="Center" Width="266" Height="35" VerticalAlignment="Center" IsReadOnly="True">
+        <ComboBox Name="regBox" Text="Выберите группу" Grid.Column="2" Grid.Row="4" FontSize="18" HorizontalAlignment="Center" Width="266" Height="35" VerticalAlignment="Center" IsReadOnly="True" VerticalContentAlignment="Center">
             <ComboBoxItem Content="Администратор"/>
             <ComboBoxItem Content="Консультант"/>
         </ComboBox>

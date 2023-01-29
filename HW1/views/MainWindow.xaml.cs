@@ -23,5 +23,37 @@ namespace HW1.views
         {
             InitializeComponent();
         }
+
+        private void seriesBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (seriesBox.Text == "Серия") 
+            {
+                seriesBox.Text = "";
+            }
+        }
+
+        private void seriesBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (seriesBox.Text == "")
+            {
+                seriesBox.Text = "Серия";
+            }
+        }
+
+        private void numberBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (numberBox.Text == "Номер")
+            {
+                numberBox.Text = "";
+            }
+        }
+
+        private void numberBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (numberBox.Text == "")
+            {
+                numberBox.Text = "Номер";
+            }
+        }
     }
 }

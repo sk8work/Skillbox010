@@ -5,8 +5,85 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HW1.views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen">
+        Title="SkillBank" Height="530" Width="800" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TabControl x:Name="tabControl" Grid.ColumnSpan="2" Height="494" VerticalAlignment="Center">
+            <TabItem Header="Список клиентов" Margin="-2,-1,-2,0">
+                <Grid Height="479">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="167*"/>
+                        <ColumnDefinition Width="71*"/>
+                        <ColumnDefinition Width="174*"/>
+                        <ColumnDefinition Width="223*"/>
+                        <ColumnDefinition Width="159*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14*"/>
+                        <RowDefinition Height="34*"/>
+                        <RowDefinition Height="352*"/>
+
+                        <RowDefinition Height="69*"/>
+                        <RowDefinition Height="10*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock HorizontalAlignment="Left" FontSize="20" TextAlignment="Center" TextWrapping="Wrap" Text="Список Клиентов" VerticalAlignment="Center" Width="220" Height="30" Grid.Row="1" Grid.ColumnSpan="2" Margin="9,0,0,0"/>
+                    <TextBlock HorizontalAlignment="Left" FontSize="20" TextAlignment="Center" TextWrapping="Wrap" Text="Подробная информация о клиенте" VerticalAlignment="Center" Width="540" Height="30" Grid.ColumnSpan="4" Margin="57,0,0,0" Grid.Row="1" Grid.Column="1"/>
+                    <ListBox x:Name="listClients" d:ItemsSource="{d:SampleData ItemCount=50}" Grid.RowSpan="2" Grid.Row="2" Height="394" VerticalAlignment="Center" HorizontalAlignment="Left" Width="218" Grid.ColumnSpan="2" Margin="10,0,0,0"/>
+
+                    <Button x:Name="button" Grid.Column="3" FontSize="18" Content="Сохранить изменения" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="50" Width="205"/>
+
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Завести нового клиента" Margin="-2,-1,-2,0">
+                <Grid Height="479">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="157*"/>
+                        <ColumnDefinition Width="160*"/>
+                        <ColumnDefinition Width="155*"/>
+                        <ColumnDefinition Width="165*"/>
+                        <ColumnDefinition Width="157*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0*"/>
+                        <RowDefinition Height="55"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="0*"/>
+                        <RowDefinition Height="84*"/>
+
+                        <RowDefinition Height="58*"/>
+                        <RowDefinition Height="17*"/>
+                    </Grid.RowDefinitions>
+
+
+
+                    <Button x:Name="NewButton" Grid.Column="2" FontSize="16" Content="Добавить" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Center" Height="62" Width="300" Grid.ColumnSpan="2"/>
+                    <TextBlock Grid.Column="1" Grid.Row="2" FontSize="16" TextAlignment="Right" TextWrapping="Wrap" Text="Имя" Height="24" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140"/>
+                    <TextBlock Grid.Column="1" Grid.Row="3" FontSize="16" TextAlignment="Right" TextWrapping="Wrap" Text="Фамилия" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140"/>
+                    <TextBlock Grid.Column="1" Grid.Row="4" FontSize="16" TextAlignment="Right" TextWrapping="Wrap" Text="Отчество" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140"/>
+                    <TextBlock Grid.Column="1" Grid.Row="5" FontSize="16" TextAlignment="Right" TextWrapping="Wrap" Text="Телефон" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140"/>
+                    <TextBlock Grid.Column="1" Grid.Row="6" FontSize="16" TextAlignment="Right" TextWrapping="Wrap" Text="Паспорт" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140"/>
+
+                    <TextBox x:Name="nameBox" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="300" Height="26" Grid.ColumnSpan="2" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="lastNameBox" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="300" Height="26" Grid.ColumnSpan="2" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="patronymicBox" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="300" Height="26" Grid.ColumnSpan="2" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="phoneBox" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="300" Height="26" Grid.ColumnSpan="2" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="seriesBox" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="6" TextWrapping="Wrap" Text="Серия" VerticalAlignment="Center" Width="135" Height="24" VerticalContentAlignment="Center" GotFocus="seriesBox_GotFocus" LostFocus="seriesBox_LostFocus"/>
+                    <TextBox x:Name="numberBox" Grid.Column="3" HorizontalAlignment="Center" Grid.Row="6" TextWrapping="Wrap" Text="Номер" VerticalAlignment="Center" Width="145" Height="24" VerticalContentAlignment="Center" GotFocus="numberBox_GotFocus" LostFocus="numberBox_LostFocus"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
+
 </Window>
